@@ -37,7 +37,7 @@ control_vector_t_minus_1 = np.array([4.5, 0.01])
 # with the number of elements equal to the number of states
 process_noise_v_t_minus_1 = np.array([0, 0, 0])
 
-delta_t = 0.01  # seconds
+delta_t = 0.001  # seconds
 
 
 def getB(yaw, dt):
@@ -106,7 +106,7 @@ def main():
         state_estimate_t_minus_1[2] = state_estimate_t[2]
         process_noise_v_t_minus_1[0] = (np.random.rand()-0.5)*2
         process_noise_v_t_minus_1[1] = (np.random.rand()-0.5)*2
-        process_noise_v_t_minus_1[2] = (np.random.rand()-0.5)*2.0
+        process_noise_v_t_minus_1[2] = (np.random.rand()-0.5)*2.01
 
     # plt.ylabel('some numbers')
     plt.show()
